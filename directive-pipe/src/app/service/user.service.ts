@@ -12,5 +12,12 @@ export class UserService {
     new User({id: 3, firstName: 'Bob', lastName: 'Marley', email: 'bob@gmail.com'}),
   ];
 
-  constructor() { }
+  constructor() {
+    // setInterval( () => {
+    //   const lastID: number = this.list[this.list.length-1].id;
+    //   this.list.push(
+    //     new User({id: (lastID + 1), firstName: 'Bob', lastName: 'Marley', email: 'bob@gmail.com'})
+    //   );
+    // }, 2000 );
+  }
 }
