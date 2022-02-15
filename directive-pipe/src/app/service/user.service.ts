@@ -8,8 +8,8 @@ export class UserService {
 
   list: User[] = [
     new User({id: 1, firstName: 'Bob', lastName: 'Marley', email: 'bob@gmail.com'}),
-    new User({id: 2, firstName: 'Bob', lastName: 'Marley', email: 'bob@gmail.com'}),
-    new User({id: 3, firstName: 'Bob', lastName: 'Marley', email: 'bob@gmail.com'}),
+    new User({id: 2, firstName: 'Jim', lastName: 'Carrey', email: 'jim@gmail.com'}),
+    new User({id: 3, firstName: 'Arnold', lastName: 'Schwarzenegger', email: 'arnie@gmail.com'}),
   ];
 
   constructor() {

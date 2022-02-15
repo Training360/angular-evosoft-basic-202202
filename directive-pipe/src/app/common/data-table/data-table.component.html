@@ -3,21 +3,24 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>#</th>
-          <th>FullName</th>
-          <th>Email</th>
-          <th>Address</th>
-          <th>Active</th>
+          <th
+            *ngFor="let col of cols"
+            (click)="onSort(col.key)">
+              <i
+                *ngIf="sortKey === col.key"
+                class="fa"
+                [class.fa-sort-amount-asc]="sortDirection === 1"
+                [class.fa-sort-amount-desc]="sortDirection === -1"
+                aria-hidden="true">
+              </i>
+              {{ col.title }}
+          </th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of list">
-          <td>{{ user.id }}</td>
-          <td>{{ user.fullName }}</td>
-          <td>{{ user.email }}</td>
-          <td>{{ user.address }}</td>
-          <td>{{ user.active }}</td>
+        <tr *ngFor="let user of list | sort:sortKey:sortDirection">
+          <td *ngFor="let col of cols">{{ user[col.key] }}</td>
           <td></td>
         </tr>
       </tbody>
