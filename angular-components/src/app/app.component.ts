@@ -16,6 +16,10 @@ export class AppComponent {
     'btn-info': false,
   };
 
+  phrase: string = '';
+
+  userName: string = 'Péter';
+
   showGreeting(): void {
     this.numberOfClicks++;
 
@@ -29,5 +33,9 @@ export class AppComponent {
     }
 
     this.subTitle = `${this.myTitle}:${this.numberOfClicks}`;
+  }
+
+  onSearch(phrase: string): void {
+    this.phrase = phrase;
   }
 }
