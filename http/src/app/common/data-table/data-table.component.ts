@@ -14,6 +14,8 @@ export class DataTableComponent<T> implements OnInit {
 
   @Output() startDelete: EventEmitter<T> = new EventEmitter();
 
+  @Output() startEdit: EventEmitter<T> = new EventEmitter();
+
   sortKey: string = '';
 
   sortDirection: number = 1;
@@ -35,6 +37,10 @@ export class DataTableComponent<T> implements OnInit {
 
   onDelete(item: T): void {
     this.startDelete.emit(item);
+  }
+
+  onEdit(item: T): void {
+    this.startEdit.emit(item);
   }
 
 }

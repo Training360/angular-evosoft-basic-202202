@@ -8,30 +8,7 @@ import { ProductService } from './service/product.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'http';
-
-  productList: Product[] = [];
-
-  productCols: ITableColumn[] = this.config.productTableColumns;
-
-  constructor(
-    private productService: ProductService,
-    private config: ConfigService,
-  ) {}
-
-  ngOnInit(): void {
-    this.productService.getAll().subscribe(
-      products => this.productList = products,
-      err => console.error(err),
-      () => console.log('Completed'),
-    );
-  }
-
-  startDelete(product: Product): void {
-    this.productService.delete(product.id).subscribe(
-      () => {},
-    );
-  }
 
 }

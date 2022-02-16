@@ -23,6 +23,9 @@
           <td *ngFor="let col of cols">{{ item[col.key] }}</td>
           <td>
             <div class="btn-group">
+              <button (click)="onEdit(item)" class="btn btn-info">
+                <i class="fa fa-pencil"></i>
+              </button>
               <button (click)="onDelete(item)" class="btn btn-danger">
                 <i class="fa fa-trash"></i>
               </button>

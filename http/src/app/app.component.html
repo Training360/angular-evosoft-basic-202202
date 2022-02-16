@@ -1,13 +1,10 @@
-
+<app-nav></app-nav>
 
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <app-data-table
-        [list]="productList"
-        [cols]="productCols"
-        (startDelete)="startDelete($event)">
-      </app-data-table>
+      <router-outlet></router-outlet>
+      <!-- This is the place of components. -->
     </div>
   </div>
 </div>
