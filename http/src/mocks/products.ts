@@ -1,0 +1,4 @@
+export const products = [
+  { "id": 1, "name": "Datesee", "price": 82, "category": "Electronic" }, { "id": 2, "name": "Ssdfp - Campbells Mac N Cheese", "price": 95, "category": "Beauty" }, { "id": 3, "name": "Eel - Smoked", "price": 47, "category": "Grocery" }, { "id": 4, "name": "Asparagus - White, Canned", "price": 46, "category": "Electronic" }, { "id": 5, "name": "Wine - White, Ej", "price": 12, "category": "Beauty" }, { "id": 6, "name": "Cheese - Parmesan Grated", "price": 96, "category": "Grocery" }, { "id": 7, "name": "Pepper - Red Chili", "price": 14, "category": "Electronic" }, { "id": 8, "name": "Napkin - Beverage 1 Ply", "price": 4, "category": "Electronic" }, { "id": 9, "name": "Oven Mitts 17 Inch", "price": 11, "category": "Electronic" }, { "id": 10, "name": "Syrup - Golden, Lyles", "price": 52, "category": "Electronic" }, { "id": 11, "name": "Soup - Campbells Tomato Ravioli", "price": 20, "category": "Grocery" },
+
+];

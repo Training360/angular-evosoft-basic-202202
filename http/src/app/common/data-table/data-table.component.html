@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th
+            *ngFor="let col of cols"
+            (click)="onSort(col.key)">
+              <i
+                *ngIf="sortKey === col.key"
+                class="fa"
+                [class.fa-sort-amount-asc]="sortDirection === 1"
+                [class.fa-sort-amount-desc]="sortDirection === -1"
+                aria-hidden="true">
+              </i>
+              {{ col.title }}
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of list | sort:sortKey:sortDirection">
+          <td *ngFor="let col of cols">{{ item[col.key] }}</td>
+          <td>
+            <div class="btn-group">
+              <button (click)="onDelete(item)" class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
